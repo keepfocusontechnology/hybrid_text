@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.qual1ty.flutter.hybrid_edit_text.FlutterEditText xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="@dimen/demo_content_padding"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:imeOptions="actionSend"
     style="@style/DemoEditText"
     android:inputType="textMultiLine"

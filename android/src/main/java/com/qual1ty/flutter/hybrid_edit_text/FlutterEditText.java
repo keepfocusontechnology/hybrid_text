@@ -222,9 +222,9 @@ public class FlutterEditText extends AppCompatEditText {
         mRangeArrayList = new ArrayList<>(5);
         addPattern(DEFAULT_MENTION_TAG, DEFAULT_MENTION_PATTERN);
         addPattern(DEFAULT_TOPIC_TAG, DEFAULT_TOPIC_PATTERN);
-        mMentionTextColor = Color.RED;
+        mMentionTextColor = Color.BLUE;
         //disable suggestion
-        setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+//        setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         addTextChangedListener(new MentionTextWatcher());
     }
 

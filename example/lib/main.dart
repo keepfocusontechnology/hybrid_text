@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
               return PlatformViewsService.initSurfaceAndroidView(
                 id: params.id,
                 viewType: viewType,
-                layoutDirection: TextDirection.ltr,
+                layoutDirection: TextDirection.rtl,
                 creationParams: creationParams,
                 creationParamsCodec: StandardMessageCodec(),
               )
