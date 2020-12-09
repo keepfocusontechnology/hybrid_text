@@ -14,26 +14,26 @@ import io.flutter.plugin.common.StandardMessageCodec;
 
 class MainActivity extends FlutterActivity {
 
-    @Override
-    public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
-        flutterEngine.getPlatformViewsController().getRegistry().registerViewFactory(
-                HybridEditTextPlugin.VIEW_FLAG,
-                new HybridEditTextFactory(StandardMessageCodec.INSTANCE, new BinaryMessenger() {
-                    @Override
-                    public void send(@NonNull String channel, @Nullable ByteBuffer message) {
-
-                    }
-
-                    @Override
-                    public void send(@NonNull String channel, @Nullable ByteBuffer message, @Nullable BinaryReply callback) {
-
-                    }
-
-                    @Override
-                    public void setMessageHandler(@NonNull String channel, @Nullable BinaryMessageHandler handler) {
-
-                    }
-                }));
-
-    }
+//    @Override
+//    public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
+//        flutterEngine.getPlatformViewsController().getRegistry().registerViewFactory(
+//                HybridEditTextPlugin.VIEW_FLAG,
+//                new HybridEditTextFactory(StandardMessageCodec.INSTANCE, new BinaryMessenger() {
+//                    @Override
+//                    public void send(@NonNull String channel, @Nullable ByteBuffer message) {
+//
+//                    }
+//
+//                    @Override
+//                    public void send(@NonNull String channel, @Nullable ByteBuffer message, @Nullable BinaryReply callback) {
+//
+//                    }
+//
+//                    @Override
+//                    public void setMessageHandler(@NonNull String channel, @Nullable BinaryMessageHandler handler) {
+//
+//                    }
+//                }));
+//
+//    }
 }

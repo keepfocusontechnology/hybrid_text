@@ -7,6 +7,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
+import io.flutter.plugin.common.StandardMessageCodec
 
 /** HybirdEdittextPlugin */
 class HybridEditTextPlugin: FlutterPlugin, MethodCallHandler {
@@ -15,7 +16,7 @@ class HybridEditTextPlugin: FlutterPlugin, MethodCallHandler {
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
 
-  private val VIEW_FLAG = "hybrid_edit_text";
+ val VIEW_FLAG = "hybrid_edit_text";
 
   private lateinit var channel : MethodChannel
 
@@ -25,7 +26,7 @@ class HybridEditTextPlugin: FlutterPlugin, MethodCallHandler {
     flutterPluginBinding
             .platformViewRegistry
             .registerViewFactory(VIEW_FLAG,
-                    HybridEditTextFactory(null,flutterPluginBinding.binaryMessenger));
+                    HybridEditTextFactory(StandardMessageCodec.INSTANCE,flutterPluginBinding.binaryMessenger));
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
@@ -38,5 +39,9 @@ class HybridEditTextPlugin: FlutterPlugin, MethodCallHandler {
 
   override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
     channel.setMethodCallHandler(null)
+  }
+
+  companion object {
+    lateinit var VIEW_FLAG: String
   }
 }

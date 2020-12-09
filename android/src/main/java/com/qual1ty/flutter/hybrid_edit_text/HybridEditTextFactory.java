@@ -11,7 +11,7 @@ import io.flutter.plugin.common.MessageCodec;
 import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 
-class HybridEditTextFactory extends PlatformViewFactory {
+public class HybridEditTextFactory extends PlatformViewFactory {
 
     @NonNull
     private final BinaryMessenger messenger;
