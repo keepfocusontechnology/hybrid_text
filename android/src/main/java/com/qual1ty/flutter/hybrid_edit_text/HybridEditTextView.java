@@ -3,6 +3,7 @@ package com.qual1ty.flutter.hybrid_edit_text;
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import java.util.Map;
 import java.util.function.BiConsumer;
@@ -30,7 +31,7 @@ class HybridEditTextView implements PlatformView {
             });
         }
         Log.d(TAG, "id = " + id);
-        editText = new FlutterEditText(context);
+        editText = (FlutterEditText) LayoutInflater.from(context).inflate(R.layout.layout_native_view, null);
         editText.setOnMentionInputListener(new FlutterEditText.OnMentionInputListener() {
             @Override
             public void onTopicInput() {
